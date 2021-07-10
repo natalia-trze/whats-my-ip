@@ -1,6 +1,13 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #mapid { 
   height: 180px;
+}
+.car-container{
+margin: auto;
 }

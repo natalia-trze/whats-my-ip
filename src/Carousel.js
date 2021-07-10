@@ -3,8 +3,8 @@ import MyMap from "./MyMap";
 
 const CarouselComponent = ({fetchedData, countryInfo}) => {
   return (
-    <Carousel>
-      <Carousel.Item>
+    <Carousel style={{width: "80%", height: "40%"}} className="car-container">
+      <Carousel.Item className="carousel">
         <img
           className="d-block w-100"
           src="https://cdn.crispedge.com/43464b.png"
@@ -31,7 +31,7 @@ const CarouselComponent = ({fetchedData, countryInfo}) => {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <img src={countryInfo.flag} />
+          <img src={countryInfo.flag} style={{height: "100px", width: "200px"}} alt="flag-of-the-country"/>
           <h3>Country: {countryInfo.name}</h3>
           <h3>Numeric Code: {countryInfo.numericCode} </h3>
         </Carousel.Caption>
