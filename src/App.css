@@ -2,12 +2,16 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 #mapid { 
   height: 180px;
+  overflow: hidden;
 }
 .car-container{
 margin: auto;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }

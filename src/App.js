@@ -2,7 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import MyNavbar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CarouselComponent from './Carousel';
+import CardComponent from './CardComponent';
 const { REACT_APP_API_KEY } = process.env;
 
 export default function App() {
@@ -36,7 +36,7 @@ export default function App() {
           <div>
             <h3>{countryInfo.name}</h3>
             <h3>your IP is: {userData.ip}</h3>
-            <CarouselComponent fetchedData={userData} countryInfo={countryInfo}/>
+            <CardComponent fetchedData={userData} countryInfo={countryInfo}/>
           </div>
         )}
 
