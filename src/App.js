@@ -1,9 +1,9 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import MyNavbar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CarouselComponent from './Carousel';
+import CardComponent from './CardComponent';
 const { REACT_APP_API_KEY } = process.env;
+
 
 export default function App() {
   const [userData, setUserData] = useState({});
@@ -28,15 +28,16 @@ export default function App() {
 
   return (
     <div className="App">
-      <MyNavbar />
       {isLoading ?
-        (<h1>LOADING ...</h1>)
+        (<h1 style={{padding: "50vh"}}>LOADING ...</h1>)
         :
         (
           <div>
-            <h3>{countryInfo.name}</h3>
-            <h3>your IP is: {userData.ip}</h3>
-            <CarouselComponent fetchedData={userData} countryInfo={countryInfo}/>
+          <div className="main">
+            <h5>Location: {countryInfo.name}</h5>
+            <h5> IP: {userData.ip}</h5>
+            </div>
+            <div className="card-1"><CardComponent fetchedData={userData} countryInfo={countryInfo}/></div>
           </div>
         )}
 
