@@ -65,7 +65,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CardComponent({ fetchedData, countryInfo }) {
 
-  console.log(countryInfo)
 
   const classes = useStyles();
   const theme = useTheme();
@@ -101,17 +100,17 @@ export default function CardComponent({ fetchedData, countryInfo }) {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}>
+        <TabPanel value={value} index={0} dir={theme.direction} >
           <MyMap geoLocation={fetchedData} countryInfo={countryInfo} />
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <p>Region: {countryInfo.region}</p>
-          <p>Capital city: {countryInfo.capital}</p>
-          <p>Numeric Code: {countryInfo.numericCode}</p>
-          <p>Population: {countryInfo.population}</p>
+        <TabPanel value={value} index={1} dir={theme.direction} className="country-info">
+          <div>Region: {countryInfo.region}</div>
+          <div>Capital city: {countryInfo.capital}</div>
+          <div>Numeric Code: {countryInfo.numericCode}</div>
+          <div>Population: {countryInfo.population}</div>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <img src={countryInfo.flag} alt="flag" style={{ height: "70%", width: "70%" }} />
+          <img src={countryInfo.flag} alt="flag" style={{ height: "70%", width: "70%", border: "1px black solid" }} />
         </TabPanel>
       </SwipeableViews>
     </div>

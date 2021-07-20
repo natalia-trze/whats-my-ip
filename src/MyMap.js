@@ -11,28 +11,22 @@ L.Icon.Default.mergeOptions({
     shadowUrl: require('leaflet/dist/images/marker-shadow.png').default
 });
 
-
-export default function MyMap({geoLocation, countryInfo}) {
+export default function MyMap({ geoLocation, countryInfo }) {
     let position = [geoLocation.location.lat, geoLocation.location.lng]
-    
-   console.log(geoLocation)
 
     return (
         <Box component="span" m={1}>
-            
-        <MapContainer style={{height: "90vh", width: "90vw"}} center={position} zoom={5} scrollWheelZoom={false}>
-            
-            <TileLayer className="tilelayer"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            
-            <Marker position={position} >
-                <Popup>
-                    You are here :)
-                </Popup>
-            </Marker>
-        </MapContainer>
-</Box>
+            <MapContainer style={{ height: "80vh", width: "100vw", margin: "0" }} center={position} zoom={5} scrollWheelZoom={false}>
+                <TileLayer className="tilelayer"
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={position} >
+                    <Popup>
+                        You are here :)
+                    </Popup>
+                </Marker>
+            </MapContainer>
+        </Box>
     )
 }

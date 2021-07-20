@@ -8,10 +8,18 @@
 .main{
   margin-top: 2vh;
   margin-bottom: 2vh;
+  height: 100%;
 }
 .card-1{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.country-info {
+  display: flex;
+  flex-direction: column;
+}
+.MuiBox-root {
+  padding-left:2px !important;
+  padding-right:2px !important;
+}

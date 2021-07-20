@@ -29,7 +29,7 @@ export default function App() {
   return (
     <div className="App">
       {isLoading ?
-        (<h1>LOADING ...</h1>)
+        (<h1 style={{padding: "50vh"}}>LOADING ...</h1>)
         :
         (
           <div>
