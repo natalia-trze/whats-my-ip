@@ -42,6 +42,7 @@ function a11yProps(index) {
   };
 }
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     [theme.breakpoints.down('xs')]: {
@@ -100,16 +101,16 @@ export default function CardComponent({ fetchedData, countryInfo }) {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction} >
+        <TabPanel style={Object.assign({})} value={value} index={0} dir={theme.direction} >
           <MyMap geoLocation={fetchedData} countryInfo={countryInfo} />
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction} className="country-info">
+        <TabPanel style={Object.assign({})} value={value} index={1} dir={theme.direction} className="country-info">
           <div>Region: {countryInfo.region}</div>
           <div>Capital city: {countryInfo.capital}</div>
           <div>Numeric Code: {countryInfo.numericCode}</div>
           <div>Population: {countryInfo.population}</div>
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
+        <TabPanel style={Object.assign({})} value={value} index={2} dir={theme.direction}>
           <img src={countryInfo.flag} alt="flag" style={{ height: "70%", width: "70%", border: "1px black solid" }} />
         </TabPanel>
       </SwipeableViews>
