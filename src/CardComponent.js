@@ -105,10 +105,14 @@ export default function CardComponent({ fetchedData, countryInfo }) {
           <MyMap geoLocation={fetchedData} countryInfo={countryInfo} />
         </TabPanel>
         <TabPanel style={Object.assign({})} value={value} index={1} dir={theme.direction} className="country-info">
-          <div>Region: {countryInfo.region}</div>
-          <div>Capital city: {countryInfo.capital}</div>
-          <div>Numeric Code: {countryInfo.numericCode}</div>
-          <div>Population: {countryInfo.population}</div>
+          <h6>Region:</h6>
+          <div>{countryInfo.region}</div>
+          <h6>Capital city:</h6>
+          <div>{countryInfo.capital}</div>
+          <h6>Numeric Code:</h6>
+          <div>{countryInfo.numericCode}</div>
+          <h6>Population:</h6>
+          <div> {countryInfo.population}</div>
         </TabPanel>
         <TabPanel style={Object.assign({})} value={value} index={2} dir={theme.direction}>
           <img src={countryInfo.flag} alt="flag" style={{ height: "70%", width: "70%", border: "1px black solid" }} />
